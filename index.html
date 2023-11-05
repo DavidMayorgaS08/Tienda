@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda de zapatos</title>
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="./main.js"></script>
 </head>
 <header>
@@ -13,7 +14,81 @@
         <p class="nombre_tienda">Estilo Sutil</p>
     </div>
 </header>
+
 <body>
+    <div class="carrito">
+        <i class="fa-solid fa-cart-shopping"></i>
+    </div>
+    <div class="cont_carrito" id="carrito-lista">
+        <style type="text/css">
+            .tg {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+
+            .tg td {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+
+            .tg th {
+                border-color: black;
+                border-style: solid;
+                border-width: 1px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                font-weight: normal;
+                overflow: hidden;
+                padding: 10px 5px;
+                word-break: normal;
+            }
+
+            .tg .tg-baqh {
+                text-align: center;
+                vertical-align: center;
+            }
+
+            .tg .tg-amwm {
+                font-weight: bold;
+                text-align: center;
+                vertical-align: top
+            }
+        </style>
+        <table class="tg" style="table-layout: fixed; width: 351px">
+            <colgroup>
+                <col style="width: 120px">
+                <col style="width: 76.2px">
+                <col style="width: 67.2px">
+                <col style="width: 58.2px">
+                <col style="width: 79.2px">
+            </colgroup>
+            <thead>
+                <tr>
+                    <th class="tg-amwm">Imagen</th>
+                    <th class="tg-amwm">Nombre</th>
+                    <th class="tg-amwm">Precio</th>
+                    <th class="tg-amwm">Cant</th>
+                    <th class="tg-amwm">Subtotal</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="tg-baqh"><img class="img_carrito" src="./img/zapato1.jpg" alt=""></td>
+                    <td class="tg-baqh"><p>Tenis Advantage</p></td>
+                    <td class="tg-baqh">236</td>
+                    <td class="tg-baqh">1</td>
+                    <td class="tg-baqh">236</td>
+                </tr>
+            </tbody>
+        </table>
+        <button onclick="vaciarCarrito()">Vaciar</button>
+    </div>
     <main>
         <div class="cont_text_titulo">
             <h1 class="text_titulo">Bienvenido</h1>
@@ -24,223 +99,8 @@
         <div class="cont_text_listado">
             <h2 class="text_listado">Lista de productos</h2>
         </div>
-        <div class="cont_cards">
-            <div class="card">
-                <img class="img_zapato1 img_i" src="./img/zapato1.jpg" alt="">
-                <img class="img_hover" src="./img/zapato1_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">Tenis Advantage</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Sportswear</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $236</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato2 img_i" src="./img/zapato2.jpg" alt="">
-                <img class="img_hover" src="./img/zapato2_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">Tenis Duramo SL</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Running</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $276</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato3 img_i" src="./img/zapato3.jpg" alt="">
-                <img class="img_hover" src="./img/zapato3_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">Tenis Bravada</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Sportswear</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $252</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato4 img_i" src="./img/zapato4.jpg" alt="">
-                <img class="img_hover" src="./img/zapato4_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">Tenis Duramo SL</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Terrex</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $284</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato5 img_i" src="./img/zapato5.jpg" alt="">
-                <img class="img_hover" src="./img/zapato5_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">Tenis Run Falcon</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Running</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $205</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato6 img_i" src="./img/zapato6.jpg" alt="">
-                <img class="img_hover" src="./img/zapato6_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">Tenis Duramo SL 2.0</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Running</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $260</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato7 img_i" src="./img/zapato7.jpg" alt="">
-                <img class="img_hover" src="./img/zapato7_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">Tenis EQ21 Run</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Running</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $355</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato8 img_i" src="./img/zapato8.jpg" alt="">
-                <img class="img_hover" src="./img/zapato8_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">NY 90</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Originals</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $315</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato9 img_i" src="./img/zapato9.jpg" alt="">
-                <img class="img_hover" src="./img/zapato9_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">USA 84</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Originals</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $331</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato10 img_i" src="./img/zapato10.jpg" alt="">
-                <img class="img_hover" src="./img/zapato10_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">Tenis Duramo SL</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Running</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $349</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato11 img_i" src="./img/zapato11.jpg" alt="">
-                <img class="img_hover" src="./img/zapato11_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">X CRAZYFAST.3 LL FG</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Fútbol</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $418</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
-            <div class="card">
-                <img class="img_zapato12 img_i" src="./img/zapato12.jpg" alt="">
-                <img class="img_hover" src="./img/zapato12_2.jpg" alt="">
-                <div class="cont_text_card">
-                    <div class="cont_nombre">
-                        <h3 class="text_nombre">Tenis Coreracer</h3>
-                    </div>
-                    <div class="cont_tipo">
-                        <p class="text_tipo">Sportswear</p>
-                    </div>
-                    <div class="cont_precio">
-                        <p class="text_precio">Precio: $229</p>
-                    </div>
-                    <div class="cont_boton">
-                        <button class="btn">Agregar al carrito</button>
-                    </div>
-                </div>
-            </div>
+        <div class="cont_cards" id="cont_cards">
+
         </div>
     </section>
 </body>
