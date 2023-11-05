@@ -4,3 +4,117 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+
+.cont_nombre_tienda{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 0;
+    height: 50px;
+    background-color: #e3b913;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.img1{
+    width: 100%;
+    filter: brightness(0.7);
+    z-index: 99;
+}
+
+main{
+    position: relative;
+}
+
+.cont_text_titulo {
+    position: absolute;
+    z-index: 100;
+    top: 45%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
+.cont_text_listado{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.cont_cards{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin: 20px 5%;
+    justify-content: center;
+}
+
+.card img{
+    width: 100%;
+    
+}
+
+.card{
+    border: 2px solid #e3b913;
+    padding-bottom: 20px;
+}
+
+.cont_nombre{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.cont_tipo{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.cont_precio{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 5px;
+}
+
+.cont_boton{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.btn{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #e3b913;
+    border: none;
+    font-size: 16px;
+}
+
+.btn:hover{
+    cursor: pointer;
+}
+
+.img_hover{
+    display: none;
+}
+
+.card:hover .img_i{
+    display: none;
+}
+
+.card:hover .img_hover{
+    display: block;
+}
