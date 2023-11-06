@@ -2,39 +2,27 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-}
-
-.cont_nombre_tienda{
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 0;
-    height: 60px;
-    background-color: #e3b913;
-    font-size: 30px;
-    font-weight: bold;
+    font-family: 'Tahoma', sans-serif;
 }
 
 .img1{
     width: 100%;
-    filter: brightness(0.7);
     z-index: 99;
 }
 
 main{
     position: relative;
+    filter: brightness(0.7);
 }
 
 .cont_text_titulo {
     position: absolute;
     z-index: 100;
-    top: 45%;
+    top: 55%;
     width: 100%;
     display: flex;
     justify-content: center;
-    color: #ffffff;
+    color: #FFD6E8;
     font-size: 30px;
     text-transform: uppercase;
 }
@@ -57,12 +45,14 @@ main{
 
 .card img{
     width: 100%;
-    
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
 }
 
 .card{
-    border: 2px solid #e3b913;
+    border: 2px solid #922B21;
     padding-bottom: 20px;
+    border-radius: 10px;
 }
 
 .cont_nombre{
@@ -98,7 +88,8 @@ main{
 .btn{
     padding: 10px;
     border-radius: 5px;
-    background-color: #e3b913;
+    background-color: #922B21;
+    color: #ffffff;
     border: none;
     font-size: 16px;
 }
@@ -142,7 +133,8 @@ main{
     z-index: 1000;
     top: 10px;
     right: 10px;
-    background-color: #e3b913;
+    background-color: #851d11;
+    color: #ffffff;
     padding: 10px;
     border-radius: 100px;
     display: flex;
@@ -151,14 +143,27 @@ main{
     font-size: 25px;
 }
 
+.checkbtn{
+    cursor: pointer;
+}
+
+#check{
+    display: none;
+}
+
+nav{
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+
 .cont_carrito{
-    position: fixed;
-    z-index: 1000;
-    background-color: #e3b913;
+    background-color: #922B21;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 15px;
+    width: 40%;
 }
 
 .cont_titulo_carro{
@@ -194,4 +199,45 @@ main{
 
 .img_carrito{
     width: 100px;
+}
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg td, .tg th {
+    border: none;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+    border-bottom: 2px solid #797D7F;
+}
+
+.tg .tg-objetos {
+    text-align: center;
+    vertical-align: center;
+}
+
+.tg .tg-titulo {
+    font-weight: bold;
+    text-align: center;
+    vertical-align: top;
+}
+
+.fa-xmark{
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.footer_tabla{
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+}
+
+#check:checked ~ nav{
+    display: block;
 }

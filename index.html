@@ -9,92 +9,58 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
     <script src="./main.js"></script>
 </head>
-<header>
-    <div class="cont_nombre_tienda">
-        <p class="nombre_tienda">Estilo Sutil</p>
-    </div>
-</header>
-
 <body>
-    <div class="carrito">
-        <i class="fa-solid fa-cart-shopping"></i>
-    </div>
-    <div class="cont_carrito" id="carrito-lista">
-        <style type="text/css">
-            .tg {
-                border-collapse: collapse;
-                border-spacing: 0;
-            }
-
-            .tg td {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-
-            .tg th {
-                border-color: black;
-                border-style: solid;
-                border-width: 1px;
-                font-family: Arial, sans-serif;
-                font-size: 14px;
-                font-weight: normal;
-                overflow: hidden;
-                padding: 10px 5px;
-                word-break: normal;
-            }
-
-            .tg .tg-baqh {
-                text-align: center;
-                vertical-align: center;
-            }
-
-            .tg .tg-amwm {
-                font-weight: bold;
-                text-align: center;
-                vertical-align: top
-            }
-        </style>
-        <table class="tg" style="table-layout: fixed; width: 351px">
-            <colgroup>
-                <col style="width: 120px">
-                <col style="width: 76.2px">
-                <col style="width: 67.2px">
-                <col style="width: 58.2px">
-                <col style="width: 79.2px">
-            </colgroup>
-            <thead>
-                <tr>
-                    <th class="tg-amwm">Imagen</th>
-                    <th class="tg-amwm">Nombre</th>
-                    <th class="tg-amwm">Precio</th>
-                    <th class="tg-amwm">Cant</th>
-                    <th class="tg-amwm">Subtotal</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td class="tg-baqh"><img class="img_carrito" src="./img/zapato1.jpg" alt=""></td>
-                    <td class="tg-baqh"><p>Tenis Advantage</p></td>
-                    <td class="tg-baqh">236</td>
-                    <td class="tg-baqh">1</td>
-                    <td class="tg-baqh">236</td>
-                </tr>
-            </tbody>
-        </table>
-        <button onclick="vaciarCarrito()">Vaciar</button>
-    </div>
     <main>
         <div class="cont_text_titulo">
-            <h1 class="text_titulo">Bienvenido</h1>
+            <h1 class="text_titulo">Adidas</h1>
         </div>
         <img class="img1" src="./img/slide.jpg">
     </main>
+    <div class="carrito">
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i onclick="MostrarCarrito()" class="fa-solid fa-cart-shopping"></i>
+        </label>
+    </div>
+    <nav>
+        <div class="cont_text_listado">
+            <h2 class="text_listado">Carrito de compras</h2>
+        </div>
+        
+        <div class="cont_carrito" id="carrito-lista">
+            <table class="tg">
+                <colgroup>
+                    <col style="width: 120px">
+                    <col style="width: 76.2px">
+                    <col style="width: 67.2px">
+                    <col style="width: 58.2px">
+                    <col style="width: 79.2px">
+                    <col style="width: 30px">
+                </colgroup>
+                <thead>
+                    <tr>
+                        <th class="tg-titulo">Imagen</th>
+                        <th class="tg-titulo">Nombre</th>
+                        <th class="tg-titulo">Precio</th>
+                        <th class="tg-titulo">Cant</th>
+                        <th class="tg-titulo">Subtotal</th>
+                        <th class="tg-titulo"></th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-tabla">
+    
+                </tbody>
+            </table>
+            <div class="footer_tabla">
+                <div class="cont_vaciar">
+                    <button onclick="vaciarCarrito()">Vaciar</button>
+                </div>
+                <div class="cont_total_tabla">
+                    <p class="text_total_tabla" id="total-carrito"></p>
+                </div>
+            </div>
+        </div>
+    </nav>
     <section>
         <div class="cont_text_listado">
             <h2 class="text_listado">Lista de productos</h2>
