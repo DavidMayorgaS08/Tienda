@@ -110,24 +110,6 @@ main{
     display: block;
 }
 
-@media(max-width: 900px){
-    .cont_cards{
-        grid-template-columns: repeat(3, 1fr);
-    }
-}
-
-@media(max-width: 700px){
-    .cont_cards{
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media(max-width: 450px){
-    .cont_cards{
-        grid-template-columns: repeat(1, 1fr);
-    }
-}
-
 .carrito{
     position: fixed;
     z-index: 1000;
@@ -152,9 +134,11 @@ main{
 }
 
 nav{
+    width: 100%;
     display: none;
     flex-direction: column;
     align-items: center;
+    color: #ffffff;
 }
 
 .cont_carrito{
@@ -212,7 +196,7 @@ nav{
     overflow: hidden;
     padding: 10px 5px;
     word-break: normal;
-    border-bottom: 2px solid #797D7F;
+    border-bottom: 2px solid #c1c1c1;
 }
 
 .tg .tg-objetos {
@@ -227,7 +211,6 @@ nav{
 }
 
 .fa-xmark{
-    color: red;
     font-size: 30px;
     cursor: pointer;
 }
@@ -236,8 +219,41 @@ nav{
     display: flex;
     justify-content: space-between;
     width: 85%;
+    margin-top: 10px;
 }
 
 #check:checked ~ nav{
     display: block;
+}
+
+.cerrar_Carrito{
+    width: 100%;
+    display: flex;
+    justify-content: end;
+}
+
+.cont_vaciar button{
+    padding: 5px;
+    background-color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+@media(max-width: 900px){
+    .cont_cards{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media(max-width: 700px){
+    .cont_cards{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media(max-width: 450px){
+    .cont_cards{
+        grid-template-columns: repeat(1, 1fr);
+    }
 }

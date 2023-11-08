@@ -19,15 +19,17 @@
     <div class="carrito">
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
-            <i onclick="MostrarCarrito()" class="fa-solid fa-cart-shopping"></i>
+            <i onclick="IniciarCarrito()" class="fa-solid fa-cart-shopping"></i>
         </label>
     </div>
-    <nav>
-        <div class="cont_text_listado">
-            <h2 class="text_listado">Carrito de compras</h2>
-        </div>
-        
+    <div class="cont_text_listado">
+        <h2 class="text_listado">Lista de productos</h2>
+    </div>
+    <nav id="body1">
         <div class="cont_carrito" id="carrito-lista">
+            <div class="cerrar_Carrito">
+                <i onclick="FinCarrito()" class="fa-solid fa-xmark"></i>
+            </div>
             <table class="tg">
                 <colgroup>
                     <col style="width: 120px">
@@ -61,10 +63,7 @@
             </div>
         </div>
     </nav>
-    <section>
-        <div class="cont_text_listado">
-            <h2 class="text_listado">Lista de productos</h2>
-        </div>
+    <section id="body2">
         <div class="cont_cards" id="cont_cards">
 
         </div>
