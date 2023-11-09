@@ -139,6 +139,11 @@ nav{
     flex-direction: column;
     align-items: center;
     color: #ffffff;
+    margin-bottom: 30px;
+}
+
+.tit2{
+    width: 76px;
 }
 
 .cont_carrito{
@@ -250,9 +255,20 @@ nav{
     padding-right: 40px;
 }
 
+@media(max-width: 980px){
+    .cont_carrito{
+        width: 80%;
+    
+    }
+}
+
 @media(max-width: 900px){
     .cont_cards{
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .cont_text_titulo{
+        display: none;
     }
 }
 
@@ -262,8 +278,19 @@ nav{
     }
 }
 
+@media(max-width: 500px){
+    .cont_carrito{
+        width: 95%;
+    
+    }
+}
+
 @media(max-width: 450px){
     .cont_cards{
         grid-template-columns: repeat(1, 1fr);
     }
+
+    .tit1{
+        display: none;
+    }	
 }

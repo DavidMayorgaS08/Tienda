@@ -151,52 +151,23 @@ function agregarAlCarrito(id) {
     mostrarCarritoEnTabla();
 }
 
-// function mostrarCarritoEnTabla() {
-//     const totalCarritoElement = document.getElementById('total-carrito');
-//     const carritoTabla = document.getElementById('carrito-tabla');
-//     carritoTabla.innerHTML = '';
-
-//     carrito.forEach(item => {
-//         const producto = item.producto;
-//         const cantidad = item.cantidad;
-//         const subtotal = producto.precio * cantidad;
-
-//         const row = document.createElement('tr');
-//         row.innerHTML = `
-//             <td class="tg-objetos"><img class="img_carrito" src="${producto.img1}" alt=""></td>
-//             <td class="tg-objetos">${producto.nombre}</td>
-//             <td class="tg-objetos">$${producto.precio}</td>
-//             <td class="tg-objetos">${cantidad}</td>
-//             <td class="tg-objetos">$${subtotal}</td>
-//             <td class="tg-objetos"><i class="fa-solid fa-xmark" onclick="eliminarProducto(${producto.id})"></i></td>
-//         `;
-//         carritoTabla.appendChild(row);
-
-//         const totalCarrito = carrito.reduce((total, item) => {
-//             return total + (item.producto.precio * item.cantidad);
-//         }, 0);
-
-//         totalCarritoElement.innerHTML = `Total del carrito: $${totalCarrito}`;
-//     });
-// }
-
 function mostrarCarritoEnTabla() {
     const totalCarritoElement = document.getElementById('total-carrito');
     const carritoTabla = document.getElementById('carrito-tabla');
     carritoTabla.innerHTML = '';
 
-    let totalCarrito = 0; // Inicializar el total del carrito en 0 cada vez que se muestra el carrito
+    let totalCarrito = 0;
 
     carrito.forEach(item => {
         const producto = item.producto;
         const cantidad = item.cantidad;
         const subtotal = producto.precio * cantidad;
 
-        totalCarrito += subtotal; // Sumar el subtotal al total del carrito
+        totalCarrito += subtotal;
 
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td class="tg-objetos"><img class="img_carrito" src="${producto.img1}" alt=""></td>
+            <td class="tg-objetos tit1"><img class="img_carrito" src="${producto.img1}" alt=""></td>
             <td class="tg-objetos">${producto.nombre}</td>
             <td class="tg-objetos">$${producto.precio}</td>
             <td class="tg-objetos">${cantidad}</td>
