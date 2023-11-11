@@ -171,7 +171,6 @@ function mostrarCarritoEnTabla() {
 
         if(totalProductos > 0){
             contenedor.style.display = "flex";
-            console.log("soy mayor a 0");
         }
 
         const row = document.createElement('tr');
